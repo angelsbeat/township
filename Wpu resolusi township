@@ -1,0 +1,569 @@
+local baseAddress = gg.getRangesList('libil2cpp.so')
+on = '〖 OFF〗'
+off = '〖 ON〗'
+godmode = on --buat terhubung sama kode function
+strmrnge = on
+matk = on
+luk = on
+cspd = on
+lessdeff = on
+MobNoMove = on
+MobNoGuard = on
+crt = on
+dmg = on
+function Exit()
+print("Created By : Winner Win ")
+print("Toram V3.3.30")
+gg.setVisible(true)
+os.exit()
+end
+
+function loby()
+gg.setVisible(false)
+lobyAlert = gg.alert(os.date([[
+Edited By Winner Win
+Today : %d/%m/%Y
+Time : %H:%M ]]), "[ᴍᴇɴᴜ]", "[ᴇxɪᴛ]")
+if lobyAlert == 2 then
+Exit()
+end
+end
+
+HOME = 1
+SPEEDFUNCTIONNI = 1
+loby()
+
+function Main()
+mainMenu = gg.choice({
+'?⇲ Player ✓ \n ╰〖 MENU〗',
+'?⇲ Status ✓ \n ╰〖 MENU〗',
+'?⇲ Mob✓ \n ╰〖 MENU〗',
+'?⇲ coming soon✓ \n ╰〖 MENU〗',
+'〖 EXIT〗'
+
+}, nil, (os.date([[
+Created By Winner Win
+Today : %d/%m/%Y
+Time : %H:%M ]])) )
+
+if mainMenu == 1 then
+player() -- ini nge inject ke
+end
+if mainMenu == 2 then
+status()
+end
+if mainMenu == 3 then
+mob()
+end
+if mainMenu == 4 then
+etc()
+end
+if mainMenu == 5 then
+Exit()
+end
+GLWW = -1
+end
+
+function player() --sini, trus ada urutan lagi
+playerMenu = gg.choice({
+'?⇲ GodMod ✓ \n ╰〖 ON/OFF〗',
+'?⇲ Storm AOE\n ╰〖 ON/OFF〗',
+'?⇲ MATK ✓ \n ╰〖 ON/OFF〗',
+'?⇲ CSPD ✓ \n ╰〖 ON/OFF〗',
+'〖 Back〗'
+
+}, nil, (os.date([[
+Created by yhuda elsadai
+Today : %d/%m/%Y
+Time : %H:%M ]])) )
+
+if playerMenu == 1 then -- ini kode fungsi nya
+if godmode == on then
+godmode1(on)
+godmode = off
+else
+godmode2(off)
+godmode = on
+end
+end
+if playerMenu == 2 then
+if strmrnge == on then
+strmrnge1(on)
+strmrnge = off
+else
+strmrnge2(off)
+strmrnge = on
+end
+end
+if playerMenu == 3 then
+if MATK== on then
+MATK1(on)
+MATK = off
+else
+MATK2(off)
+MATK = on
+end
+end
+if playerMenu == 4 then
+if cspd == on then
+cspd1(on)
+cspd = off
+else
+cspd2(off)
+cspd = on
+end
+end
+if playerMenu == 5 then
+Main()
+end
+GLWW = -1
+end
+
+function status()
+statusMenu = gg.choice({
+'?⇲ luk ✓ \n ╰〖 ON/OFF〗',
+'?⇲ Coming soon ✓ \n ╰〖 ON/OFF〗',
+'?⇲ Coming soon ✓ \n ╰〖 ON/OFF〗',
+'?⇲ Coming soon ✓ \n ╰〖 ON/OFF〗',
+'〖 Back〗'
+
+}, nil, (os.date([[
+Created By Winner Win
+Today : %d/%m/%Y
+Time : %H:%M ]])) )
+
+if statusMenu == 1 then
+if luk == on then
+luk1(on)
+luk = off
+else
+luk2(off)
+luk = on
+end
+end
+
+if statusMenu == 2 then
+-- Fungsi mod nya
+end
+if statusMenu == 3 then
+-- Fungsi mod nya
+end
+if statusMenu == 4 then
+-- Fungsi mod nya
+end
+if statusMenu == 5 then
+Main()
+end
+GLWW = -1
+end
+
+function mob()
+mobMenu = gg.choice({
+'?⇲ mob less deff ✓ \n ╰〖 ON/OFF〗',
+'?⇲ MobNoMove ✓ \n ╰〖 ON/OFF〗',
+'?⇲ AutoCrit ✓ \n ╰〖 ON/OFF〗',
+'?⇲ DMG ++ ✓ \n ╰〖 ON/OFF〗',
+'?⇲ Mob No Guard ✓ \n ╰〖 ON/OFF〗',
+'〖 Back〗'
+
+}, nil, (os.date([[
+Created By Yhuda elsadai
+Today : %d/%m/%Y
+Time : %H:%M ]])) )
+
+if mobMenu == 1 then
+if lessdeff == on then
+lessdeff1(on)
+lessdeff = off
+else
+lessdeff2(off)
+lessdeff = on
+end
+end
+
+if mobMenu == 2 then
+if MobNoMove == on then
+MobNoMove1(on)
+MobNoMove = off
+else
+MobNoMove2(off)
+MobNoMove = on
+end
+end
+
+if mobMenu == 3 then
+if crt == on then
+crt1(on)
+crt = off
+else
+crt2(off)
+crt = on
+end
+end
+if mobMenu == 4 then
+if dmg == on then
+dmg1(on)
+dmg = off
+else
+dmg2(off)
+dmg = on
+end
+end
+if mobMenu == 5 then
+if MobNoGuard == on then
+MobNoGuard1(on)
+MobNoGuard = off
+else
+MobNoGuard2(off)
+MobNoGuard = on
+end
+end
+
+if mobMenu == 6 then
+Main()
+end
+GLWW = -1
+end
+
+function etc()
+etcMenu = gg.choice({
+'?⇲ MENU 1 ✓ \n ╰〖 ON/OFF〗',
+'?⇲ MENU 2 ✓ \n ╰〖 ON/OFF〗',
+'?⇲ MENU 3 ✓ \n ╰〖 ON/OFF〗',
+'?⇲ MENU 4 ✓ \n ╰〖 ON/OFF〗',
+'〖 Back〗'
+
+}, nil, (os.date([[
+Created By Yhuda elsadai
+Today : %d/%m/%Y
+Time : %H:%M ]])) )
+
+if etcMenu == 1 then
+-- Fungsi mod nya
+end
+if etcMenu == 2 then
+-- Fungsi mod nya
+end
+if etcMenu == 3 then
+-- Fungsi mod nya
+end
+if etcMenu == 4 then
+-- Fungsi mod nya
+end
+if etcMenu == 5 then
+Main()
+end
+GLWW = -1
+end
+
+function strmrnge1(on)
+local vTable = {}
+-- StormRange
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x80AA90
+vTable[1].flags = gg.TYPE_FLOAT
+vTable[1].value = '0E2AB3EEr'
+
+gg.setValues(vTable)
+gg.toast('StormArea On')
+end
+
+function strmrnge2(off)
+local vTable = {}
+-- StormRange
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x80AA90
+vTable[1].flags = gg.TYPE_FLOAT
+vTable[1].value = '0C2AB7EEr'
+
+gg.setValues(vTable)
+gg.toast('StormArea Off')
+end
+
+function godmode1(on) -- nahh ini, yang buat masukin offset sama value- oke bng, nnti aku bandingin sama script aslinya bng
+local vTable = {}
+-- isInvincble
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x8EACAC
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '0100A0E3r'
+vTable[2] = {}
+vTable[2].address = baseAddress[1].start + 0x8EACB0
+vTable[2].flags = gg.TYPE_DWORD
+vTable[2].value = '1EFF2FE1r'
+
+gg.setValues(vTable)
+gg.toast('GodMode On')
+end
+
+function godmode2(off)
+local vTable = {}
+-- isInvincble
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x8EACAC
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '104C2DE9r'
+vTable[2] = {}
+vTable[2].address = baseAddress[1].start + 0x8EACB0
+vTable[2].flags = gg.TYPE_DWORD
+vTable[2].value = '08B08DE2r'
+
+gg.setValues(vTable)
+gg.toast('GodMode Off')
+end
+
+function MATK1(on)
+local vTable = {}
+-- isInvincble
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x6D09E0
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = 'EE0100E3r'
+
+gg.setValues(vTable)
+gg.toast('MATK on')
+end
+
+function MATK2(off)
+local vTable = {}
+-- int
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x6D09E0
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '100090e5r'
+gg.setValues(vTable)
+gg.toast('MATK off')
+end
+
+
+function luk1(on)
+local vTable = {}
+-- luk
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x6D0A08
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = 'EE0100E3r'
+
+gg.setValues(vTable)
+gg.toast('luk On')
+end
+
+function luk2(off)
+local vTable = {}
+-- StormRange
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x6D0A08
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '00009FE7R'
+
+gg.setValues(vTable)
+gg.toast('luk Off')
+end
+
+function cspd1(on) -- nahh ini, yang buat masukin offset sama value- oke bng, nnti aku bandingin sama script aslinya bng
+local vTable = {}
+-- cspd
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x85DF70
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '00409C46r'
+vTable[2] = {}
+vTable[2].address = baseAddress[1].start + 0xDD14EC
+vTable[2].flags = gg.TYPE_DWORD
+vTable[2].value = '00409C46r'
+
+gg.setValues(vTable)
+gg.toast('cspd On')
+end
+
+function cspd2(off)
+local vTable = {}
+-- isInvincble
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x85DF70
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = 'F6283C40r'
+vTable[2] = {}
+vTable[2].address = baseAddress[1].start + 0xDD14EC
+vTable[2].flags = gg.TYPE_DWORD
+vTable[2].value = 'F6283C40r'
+
+gg.setValues(vTable)
+gg.toast('cspd Off')
+end
+
+function lessdeff1(on)
+local vTable = {}
+-- lessdeff
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x94917C
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '0000A0E3r'
+vTable[2] = {}
+vTable[2].address = baseAddress[1].start + 0x94917C
+vTable[2].flags = gg.TYPE_DWORD
+vTable[2].value = '1EFF2FE1r'
+vTable[3] = {}
+vTable[3].address = baseAddress[1].start + 0xDD0618
+vTable[3].flags = gg.TYPE_DWORD
+vTable[3].value = '600A0EE3r'
+vTable[4] = {}
+vTable[4].address = baseAddress[1].start + 0xDD061C
+vTable[4].flags = gg.TYPE_DWORD
+vTable[4].value = '1EFF2FE1r'
+gg.setValues(vTable)
+gg.toast('lessdeff on')
+end
+
+function lessdeff2(off)
+local vTable = {}
+-- lessdeff
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0x94917C
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '104C2DE9r'
+vTable[2] = {}
+vTable[2].address = baseAddress[1].start + 0x94917C
+vTable[2].flags = gg.TYPE_DWORD
+vTable[2].value = '08B08DE2r'
+vTable[3] = {}
+vTable[3].address = baseAddress[1].start + 0xDD0618
+vTable[3].flags = gg.TYPE_DWORD
+vTable[3].value = 'F04D2DE9r'
+vTable[4] = {}
+vTable[4].address = baseAddress[1].start + 0xDD061C
+vTable[4].flags = gg.TYPE_DWORD
+vTable[4].value = '18B08DE2r'
+gg.setValues(vTable)
+gg.toast('lessdeff off')
+end
+
+function MobNoMove1(on)
+local vTable = {}
+-- MobNoMove
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0xF4F3F4
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '0000A0E3r'
+
+gg.setValues(vTable)
+gg.toast('MobNoMove On')
+end
+
+function MobNoMove2(off)
+local vTable = {}
+-- MobNoMove
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0xF4F3F4
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '640090e5r'
+
+gg.setValues(vTable)
+gg.toast('MobNoMove Off')
+end
+
+function crt1(on)
+local vTable = {}
+-- crt
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0xDFE010
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '0000A0E3r'
+vTable[2] = {}
+vTable[2].address = baseAddress[1].start + 0xDFE014
+vTable[2].flags = gg.TYPE_DWORD
+vTable[2].value = '1EFF2FE1r'
+vTable[3] = {}
+vTable[3].address = baseAddress[1].start + 0xDFE160
+vTable[3].flags = gg.TYPE_DWORD
+vTable[3].value = '0100A0E3r'
+vTable[4] = {}
+vTable[4].address = baseAddress[1].start + 0xDFE164
+vTable[4].flags = gg.TYPE_DWORD
+vTable[4].value = '1EFF2FE1r'
+gg.setValues(vTable)
+gg.toast('crt on')
+end
+
+function crt2(on)
+local vTable = {}
+-- crt
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0xDFE010
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = 'F04F2DE9r'
+vTable[2] = {}
+vTable[2].address = baseAddress[1].start + 0xDFE014
+vTable[2].flags = gg.TYPE_DWORD
+vTable[2].value = '1CB08DE2r'
+vTable[3] = {}
+vTable[3].address = baseAddress[1].start + 0xDFE160
+vTable[3].flags = gg.TYPE_DWORD
+vTable[3].value = 'F04F2DE9r'
+vTable[4] = {}
+vTable[4].address = baseAddress[1].start + 0xDFE164
+vTable[4].flags = gg.TYPE_DWORD
+vTable[4].value = '1CB08DE2r'
+gg.setValues(vTable)
+gg.toast('crt off')
+end
+
+function dmg1(A0_20)
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber('0.01', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(150)
+gg.editAll('0.02', gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast('Damage On')
+end
+
+function dmg2(A0_21)
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber('0.02', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(150)
+gg.editAll('0.01', gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast('Damage Off')
+end
+
+function MobNoGuard1(on)
+local vTable = {}
+-- MobNoGuard
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0xF4F3A4
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '0000A0E3r'
+
+gg.setValues(vTable)
+gg.toast('MobNoGuard On')
+end
+
+function MobNoGuard2(off)
+local vTable = {}
+-- MobNoGuard
+vTable[1] = {}
+vTable[1].address = baseAddress[1].start + 0xF4F3A4
+vTable[1].flags = gg.TYPE_DWORD
+vTable[1].value = '3C0090E5r'
+
+gg.setValues(vTable)
+gg.toast('MobNoGuard Off')
+end
+
+
+
+while true do
+if gg.isVisible(true) then
+GLWW = 1
+gg.setVisible(false)
+end
+gg.clearResults()
+if GLWW == 1 then
+Main()
+end
+end
+
+print("Edited By : yhuda elsadai")
+print("??THANK YOU FOR USING MY SCRIPT??")
+gg.setVisible(true)
+os.exit()
